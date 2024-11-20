@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins";
+}
+:root {
+    --Bg-Color: #080808;
+    --Second-Bg-Color: #101010;
+    --Text-Color: white;
+    --Main-Color: #ea580c;
+}
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+body {
+    background: var(--Bg-Color);
+    color: var(--Text-Color);
+}
+.Header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4rem 15%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    margin-top: -3rem;
+}
+#Menu-Icon {
+    font-size: 3.5rem;
+    color: var(--Main-Color);
+    display: none;
+}
+.Logo {
+    font-size: 3rem;
+    color: var(--Text-Color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.Logo:hover {
+    transform: scale(1.1);
+}
+span {
+    background: linear-gradient(
+        270deg,
+        #df8908 10%,
+        #ff1d15 100%
+    );
+    background-clip: text;
+    color: transparent;
+}
+.Nav-Bar a {
+    font-size: 1.5rem;
+    color: var(--Text-Color);
+    font-weight: 500;
+    margin-left: 4rem;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+.Nav-Bar a:hover,
+        a.active {
+    border-bottom: 3px solid var(--Main-Color);
+    color: var(--Main-Color);
+}
+
+.Gradient-Btn button {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    background: linear-gradient(270deg,
+                #df8908 10%,
+                #ff1d15 100%);
+                color: var(--Text-Color);
+                border: none;
+                transition: 0.3s ease-in-out;
+                cursor: pointer;
+                letter-spacing: 1px;
+                text-wrap: nowrap;
+}
+.Gradient-Btn:hover {
+    transform: scale(1.05);
+}
+section {
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+/* =======================HOME============================================== */
+.Home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+.Home-Content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: left;
+}
+.Home-Content h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+.Home-Content h3 {
+    margin: 1rem 0;
+    font-size: 3.7rem;
+}
+.Home-Content p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.8;
+    text-align: justify;
+}
+.Home-Img img {
+    width: 32vw;
+    margin-top: 4rem;
+    border-radius: 50%;
+    box-shadow:0 0 25px var(--Main-Color);
+    transition: 0.4s ease-in-out;
+}
+.Home-Img img:hover {
+    box-shadow:0 0 25px var(--Main-Color),
+                0 0 50px var(--Main-Color),
+                0 0 100px var(--Main-Color);
+}
+.Social-Icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--Main-Color);
+    border-radius: 50%;
+    color: var(--Main-Color);
+    margin: 3rem 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+.Social-Icons a:hover {
+    color: var(--Text-Color);
+    background-color: var(--Main-Color);
+    transform: scale(1.2)translateY(-5px);
+    box-shadow: 0 0 25px var(--Main-Color);
+}
+.Btn-Group {
+    display: flex;
+    gap: 1.5rem;
+}
+.BTN {
+        display: inline-block;
+        padding: 1rem 3rem;
+        background-color: var(--Main-Color);
+        box-shadow: 0 0 25px var(--Main-Color);
+        border-radius: 3rem;
+        font-size: 1.8rem;
+        color: black;
+        border: 2px solid transparent;
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
+}
+.BTN:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--Main-Color),
+                0 0 50px var(--Main-Color);
+}
+.Btn-Group a:nth-of-type(2) {
+    background-color: black;
+    color: var(--Main-Color);
+    border: 2px solid var(--Main-Color);
+    box-shadow: 0 0 25px transparent;
+}
+.Btn-Group a:nth-of-type(2):hover {
+    box-shadow: 0 0 25px var(--Main-Color);
+    background-color: var(--Main-Color);
+    color: black;
+}
+::selection {
+    background-color: #a06e5ad2;
+    color: white;
+}
+/* ============================================================ABOUT====================================================================== */
+.About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background-color: var(--Second-Bg-Color);
+}
+.About-Img  img{
+    width: 32vw;
+        border-radius: 50%;
+        box-shadow: 0 0 25px var(--Main-Color);
+        transition: 0.4s ease-in-out;
+}
+.About-Img img:hover {
+    box-shadow:  0 0 25px var(--Main-Color),
+                0 0 50px var(--Main-Color),
+                0 0 100px var(--Main-Color);
+}
+.About-Content h2 {
+    font-size: 7rem;
+    text-align: left;
+}
+.About-Content p{
+    font-size: 1.8rem;
+    text-align: justify;
+}
+.About-Content .BTN {
+    margin: 3rem 0;
+}
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--Main-Color);
+}
+::-webkit-scrollbar-track {
+    background-color: var(--Bg-Color);
+}
+.Heading {
+    text-align: center;
+    font-size: 7rem;
+    margin: 5rem 0;
+}
+/* ============================================================SERVICES======================================================== */
+.Services {
+    background-color: var(--Bg-Color);
+    color: black;
+}
+.Services h2 {
+    color: var(--Text-Color);
+}
+.Services-Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(400px,1fr));
+    align-items: center;
+    gap:4rem;
+}
+.Services-Box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Main-Color);
+    height: 650px;
+    border-radius: 3rem;
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: 0.4s ease-in-out;
+}
+.Services-Box:hover {
+    background-color: var(--Second-Bg-Color);
+    color: var(--Main-Color);
+    border: 5px solid var(--Main-Color);
+    transform: scale(1.03);
+}
+.services-Info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+.services-Info h4 {
+    font-size: 3rem;
+    margin: 2rem 0;
+    font-weight: 800;
+}
+.services-Info p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 3;
+}
+.services-Info  .bx-code{
+    font-size: 8rem;
+}
+.services-Info .bxl-figma{
+    font-size: 8rem;
+}
+.services-Info i {
+    font-size: 2rem;
+}
+/* ============================================================PROJECTS====================================================== */
+.Projects {
+    background-color: var(--Second-Bg-Color);
+}
+.project-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    place-items: center;
+    gap: 3rem;
+    row-gap: 5rem;
+}
+.Project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--Bg-Color);
+    border: 2px solid var(--Main-Color);
+    border-radius: 3rem;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--Main-Color);
+    height: 550px;
+    transition: 0.3s ease ;
+}
+.Project-card:hover {
+    box-shadow: 0 0 25px var(--Main-Color),
+                0 0 55px var(--Main-Color),
+                0 0 100px var(--Main-Color);
+    transform: scale(1.02);
+}
+.Project-card img {
+    max-width: 300px;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+.Project-card h3 {
+    font-size: 3rem;
+}
+.Project-card p {
+    font-size: 1.6rem;
+}
+/* ============================================================CONTACT====================================================================== */
+.Contact {
+    background-color: var(--Bg-Color);
+}
+.Contact h2 {
+    margin-bottom: 3rem;
+    color: var(--Text-Color);
+}
+.Contact form {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 3rem;
+    margin: 5rem 0;
+    text-align: center;
+}
+.Contact form .Input--Box input,
+.Contact form textarea {
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1.8rem;
+    color: var(--Text-Color) ;
+    background-color: var(--Bg-Color);
+    border-radius: 2rem;
+    border: 2px solid var(--Main-Color);
+    margin: 1.5rem 0;
+    resize: none;
+}
+/* ============================================================FOOTER====================================================================== */
+.Footer{
+    background-color: var(--Second-Bg-Color);
+    padding: 50px 0;
+}
+.Footer .Social-Icons {
+    text-align: center;
+}
+.Footer ul {
+    text-align: center;
+    font-size: 1.8rem;
+}
+.Footer ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.Footer ul li a {
+    color: white;
+    border-radius: 3px solid transparent;
+    transition: 0.3 ease-in-out;
+}
+.Footer ul li a:hover {
+    border-bottom: 3px solid var(--Main-Color);
+}
+.Footer .CopyRight {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 40px;
+}
+@media(max-width:1285px){
+    #Menu-Icon {
+        display: block;
+    }
+    .Nav-Bar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3rem;
+        background: rgba(0, 0, 0, 0.8);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--Main-Color);
+        border-bottom: 2px solid var(--Main-Color);
+        display: none;
+    }
+    .Nav-Bar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--Text-Color);
+    }
+    .Nav-Bar.active {
+        display: block;
+    }
+    .Gradient-Btn {
+        display: none;
+    }
+    .Home{
+        flex-direction: column-reverse;
+        margin: 5rem 0;
+        gap: 5rem;
+    }
+    .Home-Content {
+        align-items: center;
+        text-align: center;
+    }
+    .Home-Img img {
+        width: 56vw;
+    }
+    .About {
+        flex-direction: column-reverse;
+    }
+    .About h2 {
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .About img {
+        width: 52vw;
+    }
+    .Contact form {
+        flex-direction: column;
+    }
+}
