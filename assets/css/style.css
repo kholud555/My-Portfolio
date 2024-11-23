@@ -124,7 +124,7 @@ section {
     text-align: justify;
 }
 .Home-Img img {
-    width: 32vw;
+    max-width:32vw;
     margin-top: 4rem;
     border-radius: 50%;
     box-shadow:0 0 25px var(--Main-Color);
@@ -244,7 +244,7 @@ section {
 }
 .Services-Container {
     display: grid;
-    grid-template-columns: repeat(auto-fit ,minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fit ,minmax(300px,1fr));
     align-items: center;
     gap:4rem;
 }
@@ -253,7 +253,7 @@ section {
     justify-content: center;
     align-items: center;
     background-color: var(--Main-Color);
-    height: 650px;
+    min-height: 600px;
     border-radius: 3rem;
     cursor: pointer;
     border: 5px solid transparent;
@@ -283,15 +283,11 @@ section {
     font-weight: 600;
     line-height: 3;
 }
-.services-Info  .bx-code{
-    font-size: 8rem;
+.services-Info  i{
+    font-size:8rem;
 }
-.services-Info .bxl-figma{
-    font-size: 8rem;
-}
-.services-Info i {
-    font-size: 2rem;
-}
+
+
 /* ============================================================PROJECTS====================================================== */
 .Projects {
     background-color: var(--Second-Bg-Color);
@@ -302,6 +298,7 @@ section {
     place-items: center;
     gap: 3rem;
     row-gap: 5rem;
+
 }
 .Project-card {
     display: flex;
@@ -317,7 +314,7 @@ section {
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 0 5px var(--Main-Color);
-    height: 550px;
+    min-height: 650px;
     transition: 0.3s ease ;
 }
 .Project-card:hover {
@@ -337,7 +334,7 @@ section {
 .Project-card p {
     font-size: 1.6rem;
 }
-/* ============================================================CONTACT====================================================================== */
+/* ======================================================CONTACT======================================================== */
 .Contact {
     background-color: var(--Bg-Color);
 }
@@ -432,7 +429,7 @@ section {
         text-align: center;
     }
     .Home-Img img {
-        width: 56vw;
+        max-width: 56vw;
     }
     .About {
         flex-direction: column-reverse;
@@ -447,4 +444,37 @@ section {
     .Contact form {
         flex-direction: column;
     }
+}
+@media(max-width:550px) {
+    .Logo {
+    font-size: 2.5rem;
+}
+    section{
+        padding: 10rem 0%;
+    }
+    .Home-Content h1 {
+        font-size: 3rem;
+    }
+    .Home-Content h3 {
+        font-size: 3rem;
+    }
+    .About-Content h2 {
+    font-size: 5rem;
+    }
+    .services-Info  i{
+    font-size: 4rem;
+    }
+    .services-Info h4 {
+    font-size: 1.4rem;
+    }
+    .services-Info p {
+        font-size: 1.1rem;
+    }
+    .Project-card {
+    height: 600px;
+    }
+    .Contact h2 {
+        font-size: 4rem;
+    }
+
 }
